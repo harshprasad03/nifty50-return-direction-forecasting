@@ -169,6 +169,6 @@ This project demonstrates:
 ## 👨‍🎓 Author
 
 **Harsh Prasad**
-MSc Data Science – Financial Analytics Case Study
+Student | MSc Data Science | VIT Vellore
 
 ---
