@@ -1,5 +1,0 @@
-Model,Accuracy,ROC_AUC
-Naive Baseline,0.528,-
-Logistic Regression,0.539,0.517
-Random Forest,0.506,0.500
-XGBoost,0.517,0.513
