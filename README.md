@@ -169,6 +169,6 @@ This project demonstrates:
 ## 👨‍🎓 Author
 
 **Harsh Prasad**
-Student | MSc Data Science | VIT Vellore
+| Student | MSc Data Science | VIT Vellore
 
 ---
