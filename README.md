@@ -1,26 +1,33 @@
-📊 NIFTY 50 Return Direction Forecasting
-MSc Financial Analytics Case Study
-📌 Project Overview
+# 📊 NIFTY 50 Return Direction Forecasting
 
-This project investigates whether next-day NIFTY 50 index direction can be predicted using technical indicators and machine learning models.
+### MSc Financial Analytics Case Study
 
-The objective is not only to build predictive models, but to evaluate whether such models generate economically meaningful trading strategies after risk adjustment.
+---
+
+## 📌 Project Overview
+
+This project investigates whether next-day **NIFTY 50 index direction** can be predicted using technical indicators and machine learning models.
+
+The objective is not only to build predictive models, but to evaluate whether such models generate **economically meaningful trading strategies after risk adjustment**.
 
 The study follows a structured financial analytics workflow:
 
-Data Collection
+* Data Collection
+* Feature Engineering
+* Model Comparison & Selection
+* Financial Strategy Evaluation
 
-Feature Engineering
+---
 
-Model Comparison & Selection
+## 🎯 Research Question
 
-Financial Strategy Evaluation
+> Can daily technical indicators and lagged return features provide predictive power for next-day NIFTY 50 return direction?
 
-🎯 Research Question
+---
 
-Can daily technical indicators and lagged return features provide predictive power for next-day NIFTY 50 return direction?
+## 📂 Project Structure
 
-📂 Project Structure
+```
 financial_analytics_casestudy/
 │
 ├── data/
@@ -37,144 +44,131 @@ financial_analytics_casestudy/
 ├── report/
 │
 └── README.md
-📈 Methodology
-1️⃣ Data Collection
+```
 
-Historical NIFTY 50 index data
+---
 
-Cleaning and formatting
+## 📈 Methodology
 
-Log return computation
+### 1️⃣ Data Collection
 
-Stationarity testing (ADF test)
+* Historical NIFTY 50 index data
+* Data cleaning and formatting
+* Log return computation
+* Stationarity testing using the Augmented Dickey-Fuller (ADF) test
 
-2️⃣ Feature Engineering
+---
 
-Technical indicators constructed include:
+### 2️⃣ Feature Engineering
 
-Simple Moving Averages (SMA 10, 20, 50)
+The following technical indicators were constructed:
 
-Exponential Moving Average (EMA 10)
+* Simple Moving Averages (SMA 10, 20, 50)
+* Exponential Moving Average (EMA 10)
+* Rolling Volatility (10-day, 20-day)
+* Relative Strength Index (RSI)
+* Lagged Returns (1, 2, 3 days)
+* Volume Change and Volume-based features
 
-Volatility measures (rolling standard deviation)
+All features were engineered using **past information only** to prevent data leakage.
 
-Relative Strength Index (RSI)
+---
 
-Lagged returns (1, 2, 3 days)
+### 3️⃣ Modeling
 
-Volume change features
+**Models Evaluated:**
 
-All features were engineered using past information only to prevent data leakage.
+* Logistic Regression (Linear Benchmark)
+* Random Forest (Nonlinear Ensemble Model)
 
-3️⃣ Modeling
+**Modeling Principles:**
 
-Models evaluated:
+* Chronological Train-Test Split (80% / 20%)
+* Baseline Comparison (Majority Class)
+* Feature Scaling where required
+* Overfitting Analysis
+* ROC-AUC Evaluation
+* Feature Importance Analysis
 
-Logistic Regression (linear benchmark)
+The final selected model was **Logistic Regression**, based on generalization stability and interpretability.
 
-Random Forest (nonlinear ensemble)
+---
 
-Key modeling principles:
-
-Chronological train-test split (80/20)
-
-Baseline comparison (majority class)
-
-Feature scaling where appropriate
-
-Overfitting analysis
-
-ROC-AUC evaluation
-
-Feature importance analysis
-
-The final selected model was Logistic Regression, based on generalization stability.
-
-4️⃣ Strategy Evaluation
+### 4️⃣ Strategy Evaluation
 
 Model predictions were converted into a trading strategy:
 
-Long position when model predicts upward movement
+* 📈 Long position when the model predicts an upward movement
+* 🚫 No position otherwise
 
-No position otherwise
+**Performance Metrics Evaluated:**
 
-Performance metrics evaluated:
+* Cumulative Returns
+* Sharpe Ratio
+* Volatility
+* Maximum Drawdown
+* Comparison against Buy & Hold
 
-Cumulative returns
+Transaction costs were discussed conceptually as a practical limitation.
 
-Sharpe ratio
+---
 
-Volatility
+## 📊 Key Findings
 
-Maximum drawdown
-
-Comparison against Buy & Hold
-
-Transaction costs were discussed conceptually.
-
-📊 Key Findings
-
-Model accuracy was close to baseline.
-
-Random Forest exhibited overfitting.
-
-Logistic Regression demonstrated stable but weak predictive power.
-
-Strategy performance was comparable to Buy & Hold.
-
-Results are consistent with weak-form market efficiency.
+* Model accuracy was close to baseline performance.
+* Random Forest exhibited signs of overfitting.
+* Logistic Regression demonstrated stable but weak predictive power.
+* Strategy performance was comparable to Buy & Hold.
+* Results are consistent with **weak-form market efficiency**.
 
 Daily index-level forecasting remains challenging due to high noise and limited exploitable signal.
 
-⚠️ Limitations
+---
 
-Transaction costs not explicitly modeled
+## ⚠️ Limitations
 
-Only daily frequency considered
+* Transaction costs not explicitly modeled
+* Only daily frequency considered
+* No hyperparameter optimization performed
+* No regime-based or macroeconomic modeling included
 
-No hyperparameter optimization
+---
 
-No regime-based modeling
+## 🔮 Future Improvements
 
-🔮 Future Improvements
+* Incorporate macroeconomic indicators
+* Use higher-frequency intraday data
+* Apply walk-forward validation
+* Explore ensemble stacking techniques
+* Explicitly model transaction costs
 
-Incorporate macroeconomic variables
+---
 
-Use higher-frequency data
-
-Apply walk-forward validation
-
-Explore ensemble stacking methods
-
-Include transaction cost simulation
-
-🧠 Academic Contribution
+## 🧠 Academic Contribution
 
 This project demonstrates:
 
-Proper time-series modeling discipline
+* Proper time-series modeling discipline
+* Financially grounded evaluation
+* Risk-adjusted performance analysis
+* Realistic interpretation of predictive limits
 
-Financially grounded evaluation
+---
 
-Risk-adjusted performance analysis
+## 🛠 Technologies Used
 
-Realistic interpretation of predictive limits
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Statsmodels
 
-🛠 Technologies Used
+---
 
-Python
+## 👨‍🎓 Author
 
-Pandas
-
-NumPy
-
-Scikit-learn
-
-Matplotlib
-
-Statsmodels
-
-👨‍🎓 Author
-
-Harsh Prasad
+**Harsh Prasad**
 MSc Data Science – Financial Analytics Case Study
+
+---
